@@ -24,11 +24,11 @@ public class Person {
         System.out.println(person);
     }
 
-    public static void changePerson1(Person person) {
-        person.name = "Ilya";
-        person.surName = "Lagutenko";
-        System.out.println(person);
-    }
+//    public static void changePerson(Person person) {
+//        person.name = "Ilya";
+//        person.surName = "Lagutenko";
+//        System.out.println(person);
+//    }
 
 
 

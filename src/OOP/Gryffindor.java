@@ -2,7 +2,7 @@ package OOP;
 
 import java.util.Objects;
 
-public class Gryffindor extends Hogwarts{
+public class Gryffindor extends Hogwarts {
 
     private final int nobility;
     private final int honor;
@@ -104,10 +104,6 @@ public class Gryffindor extends Hogwarts{
                     + student.getNameOfStudent() + " are equal");
         }
     }
-
-
-
-
 
 
 }

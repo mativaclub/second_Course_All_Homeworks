@@ -2,7 +2,7 @@ package OOP;
 
 import java.util.Objects;
 
-public class Ravenclaw extends Hogwarts{
+public class Ravenclaw extends Hogwarts {
 
     private final int cleverness;
     private final int wisdom;
@@ -36,7 +36,6 @@ public class Ravenclaw extends Hogwarts{
     }
 
 
-
     @Override
     public String toString() {
         System.out.print(super.toString());
@@ -61,7 +60,6 @@ public class Ravenclaw extends Hogwarts{
     public int hashCode() {
         return Objects.hash(super.hashCode(), cleverness, wisdom, wit, fullOfCreativity);
     }
-
 
 
     public static void compareRavenclawStudents(Ravenclaw student1, Ravenclaw student2) {

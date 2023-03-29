@@ -17,6 +17,7 @@ public class Hogwarts {
     public String getNameOfStudent() {
         return nameOfStudent;
     }
+
     public int getPowerOfMagic() {
         return powerOfMagic;
     }
@@ -30,7 +31,7 @@ public class Hogwarts {
     public String toString() {
         return "Hogwarts student: " + nameOfStudent +
                 ", power of Magic is " + powerOfMagic +
-                ", distance of Transgression is " + distanceOfTransgression  + ", " ;
+                ", distance of Transgression is " + distanceOfTransgression + ", ";
     }
 
     @Override
@@ -54,7 +55,7 @@ public class Hogwarts {
             System.out.println("Magic power " + this.nameOfStudent + " is lower then " + student.getNameOfStudent());
         } else {
             System.out.println("Magic power of " + this.nameOfStudent + " and "
-            + student.getNameOfStudent() + " are equal");
+                    + student.getNameOfStudent() + " are equal");
         }
 
         if (this.distanceOfTransgression > student.getDistanceOfTransgression()) {
@@ -67,8 +68,7 @@ public class Hogwarts {
             System.out.println("Distance Of Transgression of " + this.nameOfStudent + " and "
                     + student.getNameOfStudent() + " are equal");
         }
-        }
-
+    }
 
 
 }

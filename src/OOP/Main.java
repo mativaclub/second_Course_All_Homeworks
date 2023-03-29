@@ -48,15 +48,12 @@ public class Main {
                 15, 15, 15);
 
 
-
 //Сделайте метод, который выводит на экран описание студента.
         print(draco);
         print(chou);
         print(zakharia);
         print(harry);
         System.out.println();
-
-
 
 
 //сравнивают между собой учеников одного факультета по свойствам
@@ -71,7 +68,6 @@ public class Main {
 
         (draco).compareSlytherin(gregori);
         System.out.println();
-
 
 
 //Реализуйте 4 метода, по одному для каждого факультета, которые сравнивают между собой учеников одного

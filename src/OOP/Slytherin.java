@@ -52,6 +52,7 @@ public class Slytherin extends Hogwarts {
                 ", resourcefulness is " + resourcefulness +
                 ", lust for Power is " + lustForPower;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -145,15 +146,6 @@ public class Slytherin extends Hogwarts {
             System.out.println("LustForPower of " + this.getNameOfStudent() + " and "
                     + student.getNameOfStudent() + " are equal");
         }
-
-
-
-
-
-
-
-
-
 
 
     }

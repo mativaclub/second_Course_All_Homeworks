@@ -2,7 +2,7 @@ package OOP;
 
 import java.util.Objects;
 
-public class Hufflepuff extends Hogwarts{
+public class Hufflepuff extends Hogwarts {
 
     private final int industrious;
     private final int loyalty;
@@ -28,6 +28,7 @@ public class Hufflepuff extends Hogwarts{
     public int getHonesty() {
         return honesty;
     }
+
     @Override
     public String toString() {
         System.out.print(super.toString());
@@ -36,6 +37,7 @@ public class Hufflepuff extends Hogwarts{
                 ", loyalty is " + loyalty +
                 ", honesty is " + honesty;
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -49,7 +51,6 @@ public class Hufflepuff extends Hogwarts{
     public int hashCode() {
         return Objects.hash(super.hashCode(), industrious, loyalty, honesty);
     }
-
 
 
     public static void compareHufflepuffStudents(Hufflepuff student1, Hufflepuff student2) {

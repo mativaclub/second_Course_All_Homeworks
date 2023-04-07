@@ -38,8 +38,8 @@ public class Ravenclaw extends Hogwarts {
 
     @Override
     public String toString() {
-        System.out.print(super.toString());
-        return "Faculty is Ravenclaw, " +
+//        System.out.print(super.toString());
+        return super.toString() + "Faculty is Ravenclaw, " +
                 "cleverness is " + cleverness +
                 ", wisdom is " + wisdom +
                 ", wit is " + wit +

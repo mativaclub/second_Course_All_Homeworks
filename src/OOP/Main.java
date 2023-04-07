@@ -6,6 +6,7 @@ import static OOP.Ravenclaw.compareRavenclawStudents;
 import static OOP.Slytherin.compareSlytherinStudents;
 
 public class Main {
+
     public static void main(String[] args) {
 
         Slytherin draco = new Slytherin("Драко Малфой", 10, 20,

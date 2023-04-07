@@ -31,8 +31,8 @@ public class Hufflepuff extends Hogwarts {
 
     @Override
     public String toString() {
-        System.out.print(super.toString());
-        return "Faculty is Hufflepuff, " +
+//        System.out.print(super.toString());
+        return super.toString() + "Faculty is Hufflepuff, " +
                 "industrious is " + industrious +
                 ", loyalty is " + loyalty +
                 ", honesty is " + honesty;

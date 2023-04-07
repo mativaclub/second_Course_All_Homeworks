@@ -1,25 +1,23 @@
-package OOP_1Homework;
+package OOP_2;
 
-public class Truck extends Vehicle implements Service{
+public class Truck extends Car implements Maintainable {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
 
     public void checkTrailer() {
-        System.out.println("Checking Trailer");
-    }
-
-    public void checkEngine() {
-        System.out.println("Checking Engine");
+        System.out.println(getModelName() + " Проверяем прицеп");
     }
 
     @Override
     public void service() {
-        System.out.println("On duty");
         updateTyre();
         checkEngine();
         checkTrailer();
     }
 
+
 }
+
+

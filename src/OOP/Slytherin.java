@@ -44,8 +44,8 @@ public class Slytherin extends Hogwarts {
 
     @Override
     public String toString() {
-        System.out.print(super.toString());
-        return "Faculty is Slytherin, " +
+//        System.out.print(super.toString());
+        return super.toString() + "Faculty is Slytherin, " +
                 "cunning is " + cunning +
                 ", resoluteness is " + resoluteness +
                 ", ambition is " + ambition +

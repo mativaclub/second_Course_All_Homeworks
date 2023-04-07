@@ -6,6 +6,7 @@ public class Truck extends Car implements Maintainable {
         super(modelName, wheelsCount);
     }
 
+
     public void checkTrailer() {
         System.out.println(getModelName() + " Проверяем прицеп");
     }

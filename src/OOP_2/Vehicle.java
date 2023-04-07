@@ -21,8 +21,7 @@ public class Vehicle {
     public void updateTyre() {
         System.out.println(getModelName() + " Меняем покрышку");
 
-}
-
+    }
 
 
 }

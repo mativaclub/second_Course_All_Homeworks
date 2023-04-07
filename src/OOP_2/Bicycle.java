@@ -5,6 +5,7 @@ public class Bicycle extends Vehicle implements Maintainable {
         super(modelName, wheelsCount);
     }
 
+
     @Override
     public void service() {
         updateTyre();

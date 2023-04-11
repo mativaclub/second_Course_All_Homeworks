@@ -1,4 +1,4 @@
-package old;
+package practice;
 
 public class Spring_Mock {
 

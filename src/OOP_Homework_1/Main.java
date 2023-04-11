@@ -1,9 +1,9 @@
-package OOP;
+package OOP_Homework_1;
 
-import static OOP.Gryffindor.compareGryffindorStudents;
-import static OOP.Hufflepuff.compareHufflepuffStudents;
-import static OOP.Ravenclaw.compareRavenclawStudents;
-import static OOP.Slytherin.compareSlytherinStudents;
+import static OOP_Homework_1.Gryffindor.compareGryffindorStudents;
+import static OOP_Homework_1.Hufflepuff.compareHufflepuffStudents;
+import static OOP_Homework_1.Ravenclaw.compareRavenclawStudents;
+import static OOP_Homework_1.Slytherin.compareSlytherinStudents;
 
 public class Main {
 

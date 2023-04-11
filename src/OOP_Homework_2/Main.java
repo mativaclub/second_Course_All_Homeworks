@@ -1,6 +1,11 @@
 package OOP_Homework_2;
 
 public class Main {
+
+    //Один комментарий, как можно сделать работу еще лучше, учти на будущее.
+    // Я бы сделал класс Vehicle абстрактным и в нем бы имплементировал  интерфейс Maintainable,
+    // сделав метод service абстрактным. Тогда бы не пришлось в каждом наследнике указывать,
+    // что класс имплементирует интерфейс и не пришлось бы кастить Vehicle к Maintainable в методе main
     public static void main(String[] args) {
 
         Vehicle[] vehicles = new Vehicle[]{
@@ -16,7 +21,7 @@ public class Main {
 
         ServiceStation serviceStation = new ServiceStation();
         for (Vehicle vehicle : vehicles) {
-            serviceStation.check((Maintainable) vehicle);
+            serviceStation.check(vehicle);
         }
 
     }

@@ -1,6 +1,6 @@
 package OOP_Homework_2;
 
-public class Truck extends Car implements Maintainable {
+public class Truck extends Car {
 
     public Truck(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);

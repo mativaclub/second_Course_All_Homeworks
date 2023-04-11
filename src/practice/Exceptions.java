@@ -1,4 +1,4 @@
-package old;//package HomeworksForSecondCourse;
+package practice;//package HomeworksForSecondCourse;
 //
 //public class Exceptions {
 //

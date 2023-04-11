@@ -1,9 +1,9 @@
 package OOP_Homework_2;
 
-public class Vehicle {
+public abstract class Vehicle implements Maintainable {
 
-    private String modelName;
-    private int wheelsCount;
+    private final String modelName;
+    private final int wheelsCount;
 
     public Vehicle(String modelName, int wheelsCount) {
         this.modelName = modelName;
@@ -19,7 +19,7 @@ public class Vehicle {
     }
 
     public void updateTyre() {
-        System.out.println(getModelName() + " Меняем покрышку");
+        System.out.println(getModelName() + " Меняем покрышку " + getWheelsCount() + " раз");
 
     }
 

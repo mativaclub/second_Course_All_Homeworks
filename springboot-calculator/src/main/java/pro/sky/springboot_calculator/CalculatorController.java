@@ -44,7 +44,10 @@ public class CalculatorController {
     //4. Метод по адресу /calculator/multiply?num1=5&num2=5 должен умножить num1 на num2 и вернуть “5 * 5 = 25”.
     @GetMapping(path = "/multiply")
     public String multiply(@RequestParam("num1") Integer num1, @RequestParam("num2") Integer num2) {
-        check(num1, num2);
+        var result = check(num1, num2);
+        if (result != null) {
+            return result;
+        }
             return num1 + " * " + num2 + " = " + calculatorService.multiply(num1, num2);
         }
 

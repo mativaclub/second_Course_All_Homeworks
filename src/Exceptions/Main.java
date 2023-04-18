@@ -2,15 +2,15 @@ package Exceptions;
 
 public class Main {
 
-    public static void check(String login, String password, String confirmPassword) {
+    public static boolean check(String login, String password, String confirmPassword) {
         //2. Параметр Login содержит в себе только латинские буквы, цифры и знак подчеркивания.
         if (!login.contains("[a-zA-Z0-9_]")) {
-            throw new RuntimeException();
+            throw new WrongLoginException();
         }
 
         //    Если login длиннее 20 символов, то  необходимо выбросить исключение – `WrongLoginException`.
         if (!(login.length() <= 20)) {
-            throw new WrongLoginException("Login must be less then 20 symbols");
+            throw new WrongLoginException();
         }
 
         //3. Параметр Password содержит в себе только латинские буквы, цифры и знак подчеркивания.
@@ -26,6 +26,7 @@ public class Main {
         if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Passwords must be equal");
         }
+        return true;
     }
 
 

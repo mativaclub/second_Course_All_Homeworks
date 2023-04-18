@@ -2,10 +2,10 @@ package Exceptions;
 
 public class Main {
 
-    public static boolean registration(String login, String password, String confirmPassword) {
+    public static void check(String login, String password, String confirmPassword) {
         //2. Параметр Login содержит в себе только латинские буквы, цифры и знак подчеркивания.
-        if (login.contains("[a-zA-Z0-9_]")) {
-            throw new RuntimeException("Login must contain letters, numbers and underline");
+        if (!login.contains("[a-zA-Z0-9_]")) {
+            throw new RuntimeException();
         }
 
         //    Если login длиннее 20 символов, то  необходимо выбросить исключение – `WrongLoginException`.
@@ -26,18 +26,17 @@ public class Main {
         if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException("Passwords must be equal");
         }
-        return true;
     }
 
 
     public static void main(String[] args) {
 
         try {
-            registration("Login_123", "password", "password");
+            check("Login_123", "password", "password");
         } catch (WrongLoginException e) {
-            throw new WrongLoginException("Length must be less then 20 symbols");
+            System.out.println("Length must be less then 20 symbols");
         } catch (WrongPasswordException e) {
-            throw new WrongPasswordException("Passwords must be equal");
+            System.out.println("Passwords must be equal");
         } finally {
             System.out.println("Registration completed");
         }

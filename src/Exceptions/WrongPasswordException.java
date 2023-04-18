@@ -5,8 +5,4 @@ public class WrongPasswordException extends RuntimeException {
         super(message);
     }
 
-    public WrongPasswordException() {
-        super();
-    }
-
 }

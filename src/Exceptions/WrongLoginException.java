@@ -6,7 +6,4 @@ public class WrongLoginException extends RuntimeException {
         super(message);
     }
 
-    public WrongLoginException() {
-        super();
-    }
 }

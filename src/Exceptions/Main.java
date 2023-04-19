@@ -5,42 +5,41 @@ import java.util.regex.Matcher;
 public class Main {
 
     public static boolean check(String login, String password, String confirmPassword) {
-        //2. Параметр Login содержит в себе только латинские буквы, цифры и знак подчеркивания.
-        if (!login.matches("[a-zA-Z0-9_]")) {
+        if (!login.matches("[a-zA-Z0-9_]+")) {
             throw new WrongLoginException("Login must contain letters, numbers and underline");
         }
 
-        //   Если login длиннее 20 символов, то  необходимо выбросить исключение – `WrongLoginException`.
-        if (!(login.length() <= 20)) {
-            throw new WrongLoginException("Login must be less then 20 symbols");
+        if (login.length() > 20) {
+            throw new WrongLoginException();
         }
 
 
-        //3. Параметр Password содержит в себе только латинские буквы, цифры и знак подчеркивания.
-        if (!password.matches("[:word:]")) {
+        if (!password.matches("[a-zA-Z0-9_]+")) {
             throw new RuntimeException("Password must contain letters, numbers and underline");
         }
 
-        //4. У параметра password есть ограничение по длине – он должен быть строго меньше 20 символов.
+
         if (!(password.length() < 20)) {
             throw new WrongPasswordException("Password must be less then 20 symbols");
         }
 
         if (!password.equals(confirmPassword)) {
-            throw new WrongPasswordException("Passwords must be equal");
+            throw new WrongPasswordException();
         }
         return true;
     }
 
 
     public static void main(String[] args) {
+        String login = "java_skypro_go5";
+        String password = "D_1hWiKjjP_9";
+        String confirmPassword = "D_1hWiKjjP_9";
+
 
         try {
-            check("Login_123", "password", "password");
-        } catch (WrongLoginException e) {
-            System.out.println("Length must be less then 20 symbols");
-        } catch (WrongPasswordException e) {
-            System.out.println("Passwords must be equal");
+            check(login, password, confirmPassword);
+        } catch (WrongLoginException | WrongPasswordException e) {
+            System.out.println(e.getMessage());
         } finally {
             System.out.println("Good luck");
         }

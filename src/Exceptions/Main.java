@@ -14,7 +14,7 @@ public class Main {
         }
 
 
-        if (!password.matches("[a-zA-Z0-9_]+")) {
+        if (!password.matches("\\w+")) {
             throw new RuntimeException("Password must contain letters, numbers and underline");
         }
 

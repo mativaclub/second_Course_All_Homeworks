@@ -2,11 +2,7 @@ package practice;
 
 public class Collections {
 
-//    package com.collectionsone.collectionsone;
-//import org.springframework.stereotype.Service;
-//import java.util.ArrayList;
-//import java.util.Collection;
-//import java.util.List;
+
 //@Service
 //public class EmployeeServiceImpl implements EmployeeService {
 //    private final List<Employee> employeeList;
@@ -47,30 +43,12 @@ public class Collections {
 //        throw new EmployeeNotFoundException();
 //    }
 //
-//
 //    @Override
 //    public Collection <Employee> getAll() {
 //        return (employeeList);
 
 
 
-
-
-//    @SpringBootApplication
-//public class CollectionsfirstApplication {
-//
-//
-//	public static void main(String[] args) {
-//		SpringApplication.run(CollectionsfirstApplication.class, args);
-//	}
-
-
-
-
-//    package com.collectionsfirst.collectionsfirst;
-//
-//import java.util.Objects;
-//
 //public class Employee {
 //
 //    String firstName;
@@ -617,7 +595,8 @@ public class Collections {
 //        Employee employee = employeeList.get(key);
 //        if (employee == null) {
 //@madyar997 madyar997 on Mar 8
-//employee никогда не будет null, так как создан строкой выше. employee нужно получить по ключу key(ключ key сейчас не используется)
+//employee никогда не будет null, так как создан строкой выше.
+// employee нужно получить по ключу key(ключ key сейчас не используется)
 //
 //@mativaclub	Reply...
 //            throw new EmployeeNotFoundException();
@@ -1163,7 +1142,8 @@ public class Collections {
 //        Employee employee = employeeList.get(key);
 //        if (employee == null) {
 //@madyar997 madyar997 on Mar 8, 2022
-//employee никогда не будет null, так как создан строкой выше. employee нужно получить по ключу key(ключ key сейчас не используется)
+//employee никогда не будет null, так как создан строкой выше. employee нужно получить по ключу
+// key(ключ key сейчас не используется)
 //
 //@mativaclub	Reply...
 //For you:

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
 @RestController
 @RequestMapping("/employee")
 public class EmployeeController {
@@ -30,7 +29,6 @@ public class EmployeeController {
         }
     }
 
-
     @GetMapping("/remove")
     public Employee remove(@RequestParam String firstName,
                            @RequestParam String lastName) {
@@ -39,7 +37,6 @@ public class EmployeeController {
         } catch (EmployeeNotFoundException e) {
             throw new RuntimeException(e.getMessage());
         }
-
     }
 
     @GetMapping("/find")
@@ -50,9 +47,7 @@ public class EmployeeController {
         } catch (EmployeeNotFoundException e) {
             throw new RuntimeException(e.getMessage());
         }
-
     }
-
 
     @GetMapping("/getList")
     public String getAllList() {

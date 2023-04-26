@@ -1,12 +1,9 @@
 package com.employeebookcollection.employee.collection.Service;
-
-import com.employeebookcollection.employee.collection.Controller.EmployeeController;
 import com.employeebookcollection.employee.collection.Model.Employee;
 
 import java.util.List;
 
 public interface EmployeeService {
-
 
     Employee add(String firstName, String lastName);
 

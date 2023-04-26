@@ -1,4 +1,4 @@
-package com.employeebookcollection.employee.collection.Homes.Model;
+package com.collections.lists.employee.model;
 
 import java.util.Objects;
 
@@ -39,7 +39,4 @@ public class Employee {
         return Objects.hash(firstName, lastName);
     }
 
-
 }
-
-

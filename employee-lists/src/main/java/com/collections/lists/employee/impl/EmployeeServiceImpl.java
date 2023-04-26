@@ -1,10 +1,10 @@
-package com.employeebookcollection.employee.collection.Impl;
+package com.collections.lists.employee.impl;
 
-import com.employeebookcollection.employee.collection.Exceptions.EmployeeAlreadyAddedException;
-import com.employeebookcollection.employee.collection.Exceptions.EmployeeNotFoundException;
-import com.employeebookcollection.employee.collection.Exceptions.EmployeeStorageIsFullException;
-import com.employeebookcollection.employee.collection.Model.Employee;
-import com.employeebookcollection.employee.collection.Service.EmployeeService;
+import com.collections.lists.employee.exceptions.EmployeeAlreadyAddedException;
+import com.collections.lists.employee.exceptions.EmployeeNotFoundException;
+import com.collections.lists.employee.exceptions.EmployeeStorageIsFullException;
+import com.collections.lists.employee.model.Employee;
+import com.collections.lists.employee.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -12,12 +12,13 @@ import java.util.List;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
+
     public static final int MAX_SIZE = 100;
     private final List<Employee> employeeList;
-
     public EmployeeServiceImpl() {
         this.employeeList = new ArrayList<>();
     }
+
     @Override
     public Employee add(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
@@ -25,11 +26,12 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new EmployeeStorageIsFullException();
         }
         if (employeeList.contains(employee)) {
-            throw new EmployeeAlreadyAddedException("Employee already added");
+            throw new EmployeeAlreadyAddedException();
         }
         employeeList.add(employee);
         return employee;
     }
+
     @Override
     public Employee remove(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
@@ -49,26 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         throw new EmployeeNotFoundException();
     }
 
-    public List<Employee> getEmployeeList() {
+    public List<Employee> getAll() {
         return employeeList;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

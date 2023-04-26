@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d32c91bc-37d2-43a6-a644-6ac8315e3cd0" name="Changes" comment="Collections commit">
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/exceptions/EmployeeAlreadyAddedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/exceptions/EmployeeNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/exceptions/EmployeeStorageIsFullException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/model/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../employee-lists/src/main/java/com/collections/lists/employee/service/EmployeeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/EmployeeCollectionApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Exceptions/EmployeeAlreadyAddedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Exceptions/EmployeeNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Exceptions/EmployeeStorageIsFullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Controller/EmployeeController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/EmployeeCollectionApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Exceptions/EmployeeAlreadyAddedException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Exceptions/EmployeeNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Exceptions/EmployeeStorageIsFullException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Impl/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Homes/Service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Impl/EmployeeServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Model/Employee.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/employeebookcollection/employee/collection/Service/EmployeeService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/employeebookcollection/employee/collection/EmployeeCollectionApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="lists_collections" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2OufNF5QcqILgiWc6Ge14VuIZln" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/masha/IdeaProjects/second_Course_All_Homeworks/employee-collection/src/main/java/com/employeebookcollection/employee/collection/Homes",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.employeebookcollection.employee.collection.Controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\masha\IdeaProjects\second_Course_All_Homeworks\employee-collection\src\main\java\com\employeebookcollection\employee\collection\Homes" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.employeebookcollection.employee.collection.Homes" />
+      <recent name="com.employeebookcollection.employee.collection" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="EmployeeCollectionApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="employee-collection" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.employeebookcollection.employee.collection.EmployeeCollectionApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d32c91bc-37d2-43a6-a644-6ac8315e3cd0" name="Changes" comment="" />
+      <created>1682415346610</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682415346610</updated>
+      <workItem from="1682415347609" duration="20537000" />
+    </task>
+    <task id="LOCAL-00001" summary="Collections commit">
+      <created>1682507848233</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682507848233</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Collections commit">
+      <created>1682508111928</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682508111928</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Collections commit">
+      <created>1682508375294</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682508375294</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Collections commit">
+      <created>1682508644276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682508644276</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Collections commit">
+      <created>1682508974655</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682508974656</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Collections commit">
+      <created>1682509665330</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682509665330</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Collections commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Collections commit" />
+  </component>
+</project>

@@ -18,7 +18,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public EmployeeServiceImpl() {
         this.employeeList = new ArrayList<>();
     }
-
     @Override
     public Employee add(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);

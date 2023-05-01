@@ -21,10 +21,10 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee add(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
         if (employeeList.size() > MAX_SIZE) {
             throw new EmployeeStorageIsFullException();
         }
+        Employee employee = new Employee(firstName, lastName);
         if (employeeList.contains(employee)) {
             throw new EmployeeAlreadyAddedException();
         }

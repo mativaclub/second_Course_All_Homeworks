@@ -25,7 +25,7 @@ public class EmployeeController {
         try {
             return employeeService.add(firstName, lastName);
         } catch (EmployeeAlreadyAddedException | EmployeeStorageIsFullException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new EmployeeAlreadyAddedException(e.getMessage());
         }
     }
 
@@ -34,7 +34,7 @@ public class EmployeeController {
         try {
             return employeeService.remove(firstName, lastName);
         } catch (EmployeeNotFoundException e) {
-            throw new RuntimeException(e.getMessage());
+            throw new EmployeeNotFoundException(e.getMessage());
         }
     }
 
@@ -43,7 +43,7 @@ public class EmployeeController {
        try {
            return employeeService.find(firstName, lastName);
        } catch (EmployeeNotFoundException e) {
-           throw new RuntimeException(e.getMessage());
+           throw new EmployeeNotFoundException(e.getMessage());
        }
     }
 

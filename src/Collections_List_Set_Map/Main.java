@@ -44,7 +44,20 @@ public class Main {
             }
         }
         System.out.println(countWords);
+
+
+        Map<String, Integer> map = new HashMap<>();
+        for (String word : strings) {
+            if (!map.containsKey(word)) {
+                map.put(word, 0);
+            }
+            if (map.containsKey(word)) {
+                map.put(word, map.get(word) + 1);
+            }
+        }
+        System.out.println(countWords);
     }
+
 
 
     public static void main(String[] args) {

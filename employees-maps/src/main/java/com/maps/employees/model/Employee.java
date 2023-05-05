@@ -21,7 +21,7 @@ public class Employee {
         return lastName;
     }
 
-    public String getFullName() {
+    public String getKey() {
         return firstName + " " + lastName;
     }
 

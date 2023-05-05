@@ -27,10 +27,10 @@ public class EmployeeServiceImpl implements EmployeeService {
             throw new EmployeeStorageIsFullException();
         }
         Employee employee = new Employee(firstName, lastName);
-        if (employees.containsKey(employee.getFullName())) {
+        if (employees.containsKey(employee.getKey())) {
             throw new EmployeeAlreadyAddedException();
         }
-        employees.put(employee.getFullName(), employee);
+        employees.put(employee.getKey(), employee);
         return employee;
     }
 
@@ -38,8 +38,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee remove(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
-        if (employees.containsKey(employee.getFullName())) {
-            return employees.remove(employee.getFullName());
+        if (employees.containsKey(employee.getKey())) {
+            return employees.remove(employee.getKey());
         }
         throw new EmployeeNotFoundException();
     }
@@ -48,8 +48,8 @@ public class EmployeeServiceImpl implements EmployeeService {
     @Override
     public Employee find(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
-        if (employees.containsKey(employee.getFullName())) {
-            return employees.get(employee.getFullName());
+        if (employees.containsKey(employee.getKey())) {
+            return employees.get(employee.getKey());
         }
         throw new EmployeeNotFoundException();
     }

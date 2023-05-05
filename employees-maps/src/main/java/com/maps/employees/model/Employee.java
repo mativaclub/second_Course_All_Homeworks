@@ -3,8 +3,11 @@ package com.maps.employees.model;
 import java.util.Objects;
 
 public class Employee {
+
     private final String firstName;
     private final String lastName;
+
+
     public Employee(String firstName, String lastName) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -18,12 +21,8 @@ public class Employee {
         return lastName;
     }
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                '}';
+    public String getFullName() {
+        return firstName + " " + lastName;
     }
 
     @Override
@@ -39,4 +38,12 @@ public class Employee {
         return Objects.hash(firstName, lastName);
     }
 
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                '}';
+    }
 }

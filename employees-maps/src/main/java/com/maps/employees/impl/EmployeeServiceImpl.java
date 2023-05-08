@@ -1,57 +1,65 @@
 package com.maps.employees.impl;
 
-import com.collections.lists.employee.exceptions.EmployeeAlreadyAddedException;
-import com.collections.lists.employee.exceptions.EmployeeNotFoundException;
-import com.collections.lists.employee.exceptions.EmployeeStorageIsFullException;
-import com.collections.lists.employee.model.Employee;
-import com.collections.lists.employee.service.EmployeeService;
+import com.maps.employees.exceptions.EmployeeAlreadyAddedException;
+import com.maps.employees.exceptions.EmployeeNotFoundException;
+import com.maps.employees.exceptions.EmployeeStorageIsFullException;
+import com.maps.employees.model.Employee;
+import com.maps.employees.service.EmployeeService;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
 
     public static final int MAX_SIZE = 100;
-    private final List<Employee> employeeList;
+
+    private final Map<String, Employee> employees;
+
     public EmployeeServiceImpl() {
-        this.employeeList = new ArrayList<>();
+        this.employees = new HashMap<>();
     }
+
 
     @Override
     public Employee add(String firstName, String lastName) {
-        if (employeeList.size() > MAX_SIZE) {
+        if (employees.size() > MAX_SIZE) {
             throw new EmployeeStorageIsFullException();
         }
-        Employee employee = new Employee(firstName, lastName);
-        if (employeeList.contains(employee)) {
+        var key = firstName + " " + lastName;
+        if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAddedException();
         }
-        employeeList.add(employee);
+        Employee employee = new Employee(firstName, lastName);
+        employees.put(key, employee);
         return employee;
     }
 
+
     @Override
     public Employee remove(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
-        if (employeeList.contains(employee)) {
-            employeeList.remove(employee);
-            return employee;
+        var key = firstName + " " + lastName;
+        var removed = employees.remove(key);
+        if (removed == null) {
+            throw new EmployeeNotFoundException();
         }
-        throw new EmployeeNotFoundException();
+        return removed;
     }
+
 
     @Override
     public Employee find(String firstName, String lastName) {
         Employee employee = new Employee(firstName, lastName);
-        if (employeeList.contains(employee)) {
-            return employee;
+        if (employees.containsKey(employee.getKey())) {
+            return employees.get(employee.getKey());
         }
         throw new EmployeeNotFoundException();
     }
 
-    public List<Employee> getAll() {
-        return employeeList;
+    @Override
+    public Collection<Employee> getAll() {
+        return Collections.unmodifiableCollection(employees.values());
     }
+
+
 }

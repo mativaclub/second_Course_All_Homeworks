@@ -1,8 +1,8 @@
 package com.maps.employees.service;
 
-import com.collections.lists.employee.model.Employee;
+import com.maps.employees.model.Employee;
 
-import java.util.List;
+import java.util.Collection;
 
 public interface EmployeeService {
 
@@ -12,5 +12,5 @@ public interface EmployeeService {
 
     Employee find(String firstName, String lastName);
 
-    List<Employee> getAll();
+    Collection<Employee> getAll();
 }

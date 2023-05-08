@@ -26,22 +26,24 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (employees.size() > MAX_SIZE) {
             throw new EmployeeStorageIsFullException();
         }
-        Employee employee = new Employee(firstName, lastName);
-        if (employees.containsKey(employee.getKey())) {
+        var key = firstName + " " + lastName;
+        if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAddedException();
         }
-        employees.put(employee.getKey(), employee);
+        Employee employee = new Employee(firstName, lastName);
+        employees.put(key, employee);
         return employee;
     }
 
 
     @Override
     public Employee remove(String firstName, String lastName) {
-        Employee employee = new Employee(firstName, lastName);
-        if (employees.containsKey(employee.getKey())) {
-            return employees.remove(employee.getKey());
+        var key = firstName + " " + lastName;
+        var removed = employees.remove(key);
+        if (removed == null) {
+            throw new EmployeeNotFoundException();
         }
-        throw new EmployeeNotFoundException();
+        return removed;
     }
 
 

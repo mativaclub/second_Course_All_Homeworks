@@ -11,10 +11,6 @@ public class EmployeesStreamApiApplication {
 	}
 
 
-//Шаг 1. Добавить в поле Employee поля «Зарплата» и «Отдел» из курсовой работы.
-//
-//Шаг 2. В текущий проект на Spring перенести методы работы с отделами из курсовой работы.
-//
 //Шаг 3. Заменить реализацию через циклы на Stream API. Написать новый контроллер и сервис, которые будут:
 //
 //1. Возвращать сотрудника с максимальной зарплатой на основе номера отдела, который приходит в запрос из браузера.
@@ -149,81 +145,6 @@ public class EmployeesStreamApiApplication {
 //                                @RequestParam("lastName") String lastName) {
 //        return employeeService.findEmployee(firstName, lastName);
 
-
-
-//public class Employee {
-//    private String firstName;
-//    private String lastName;
-//    private int salary;
-//    private int departmentId;
-//
-//    public Employee(String firstName, String lastName, int salary, int departmentId) {
-//        this.firstName = firstName;
-//        this.lastName = lastName;
-//        this.salary = salary;
-//        this.departmentId = departmentId;
-//    }
-//
-//    public String getFirstName() {
-//        return firstName;
-//    }
-//    public String getLastName() {
-//        return lastName;
-//    }
-//    public int getSalary() {
-//        return salary;
-//    }
-//    public int getDepartmentId() {
-//        return departmentId;
-//    }
-//
-//
-//    public void setFirstName(String firstName) {
-//        this.firstName = firstName;
-//    }
-//
-//    public void setLastName(String lastName) {
-//        this.lastName = lastName;
-//    }
-//
-//    public void setSalary(int salary) {
-//        this.salary = salary;
-//    }
-//
-//    public void setDepartmentId(int departmentId) {
-//        this.departmentId = departmentId;
-//    }
-//
-//    @Override
-//    public String toString() {
-//        return "FirstName: " + firstName + ",  LastName: " + lastName + ",  Salary: "
-//                + salary + ", DepartmentId: " + departmentId;
-//    }
-//
-//    @Override
-//    public boolean equals(Object o) {
-//        if (this == o) return true;
-//        if (o == null || getClass() != o.getClass()) return false;
-//        Employee employee = (Employee) o;
-//        return Float.compare(employee.salary, salary) == 0 && departmentId == employee.departmentId
-//                && Objects.equals(firstName, employee.firstName) &&
-//                Objects.equals(lastName, employee.lastName);
-//    }
-//
-//    @Override
-//    public int hashCode() {
-//        return Objects.hash(firstName, lastName, salary, departmentId);
-
-
-
-//public class EmployeeExistsException extends RuntimeException {
-//    public EmployeeExistsException(String employee_already_added) {
-//    }
-
-
-//public class EmployeeNotFoundException extends RuntimeException {
-//    public EmployeeNotFoundException(String this_employee_not_found) {
-//    }
 
 
 

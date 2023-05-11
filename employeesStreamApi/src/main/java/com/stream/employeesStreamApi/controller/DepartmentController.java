@@ -36,7 +36,7 @@ public class DepartmentController {
 //3. Возвращать всех сотрудников по отделу.
 
     //    /departments/all?departmentId=5
-    @GetMapping("/all")
+    @GetMapping (path = "/all", params = "departmentId")
     public Collection<Employee> allDepartments(@RequestParam int departmentId) {
         return departmentService.allDepartments(departmentId);
     }

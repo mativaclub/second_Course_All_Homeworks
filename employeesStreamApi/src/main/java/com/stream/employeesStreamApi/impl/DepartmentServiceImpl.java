@@ -24,37 +24,30 @@ public class DepartmentServiceImpl implements DepartmentService {
 
     @Override
     public Employee maxSalary(int departmentId) {
-        return employeeService.getAll().stream()
-                .filter(employee -> employee.getDepartmentId() == departmentId)
-                .max(Comparator.comparingInt(e -> e.getSalary()))
-                .orElseThrow(() -> new EmployeeNotFoundException("Not found"));
+       return employeeService.getAll().stream()
+               .filter(employee -> employee.getDepartmentId() == departmentId)
+               .max(Comparator.comparingInt(employee -> employee.getSalary()))
+               .orElseThrow(() -> new EmployeeNotFoundException("Not found"));
     }
 
-    @Override
     public Employee minSalary(int departmentId) {
         return employeeService.getAll().stream()
                 .filter(employee -> employee.getDepartmentId() == departmentId)
-                .min(Comparator.comparingInt(e -> e.getSalary()))
+                .min(Comparator.comparingInt(Employee::getSalary))
                 .orElseThrow(() -> new EmployeeNotFoundException("Not found"));
-
-
     }
 
-    @Override
-    public List<Employee> allDepartments(int departmentId) {
+    public Collection<Employee> allByDepartment(int departmentId) {
         return employeeService.getAll().stream()
                 .filter(employee -> employee.getDepartmentId() == departmentId)
                 .collect(Collectors.toList());
-
-
     }
 
     @Override
     public Map<Integer, List<Employee>> all() {
         return employeeService.getAll().stream()
-                .collect(Collectors.groupingBy(e-> e.getDepartmentId()));
-
-
+                .collect(Collectors.groupingBy(employee -> employee.getDepartmentId()));
     }
+
 
 }

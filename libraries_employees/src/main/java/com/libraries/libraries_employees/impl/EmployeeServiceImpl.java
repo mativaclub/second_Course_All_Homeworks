@@ -45,7 +45,6 @@ public class EmployeeServiceImpl implements EmployeeService {
         }
         return removed;
     }
-
     @Override
     public Employee find(String firstName, String lastName) {
         checkInputDetails(firstName, lastName);

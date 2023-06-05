@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class CartServiceImpl implements CartService {
 
-    public final Cart cart;
+    private final Cart cart;
 
     public CartServiceImpl(Cart cart) {
         this.cart = cart;
@@ -24,7 +24,5 @@ public class CartServiceImpl implements CartService {
     public List<Integer> get() {
         return cart.getItems();
     }
-
-
 }
 

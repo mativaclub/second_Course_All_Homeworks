@@ -14,7 +14,7 @@ import java.util.Map;
 
 @Service
 public class EmployeeServiceImpl implements EmployeeService {
-    public static final int MAX_SIZE = 100;
+    public static final int MAX_SIZE = 10;
     private final Map<String, Employee> employees = new HashMap<>();
 
     @Override

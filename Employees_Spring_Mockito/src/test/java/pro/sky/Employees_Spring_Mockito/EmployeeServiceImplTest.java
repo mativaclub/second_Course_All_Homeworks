@@ -47,10 +47,10 @@ public class EmployeeServiceImplTest {
 
     @Test
     void throwEmployeeFullListException() {
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             employeeServiceImpl.add(FULL_NAME_1 + i, SALARY_1, DEPARTMENT_ID_1);
         }
-        assertThrows(EmployeeStorageIsFullException.class, () -> employeeServiceImpl.add(FULL_NAME_1 + 101,
+        assertThrows(EmployeeStorageIsFullException.class, () -> employeeServiceImpl.add(FULL_NAME_1 + 11,
                 SALARY_1, DEPARTMENT_ID_1));
     }
 

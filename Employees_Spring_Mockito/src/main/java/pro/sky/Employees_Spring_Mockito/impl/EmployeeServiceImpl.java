@@ -39,7 +39,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee find(String fullName) {
-        return employees.get(fullName);
+        var found = employees.get(fullName);
+        if (found == null) {
+            throw new EmployeeNotFoundException("Employee not found");
+        }
+        return found;
     }
     public Map<String, Employee> getEmployees() {
         return employees;

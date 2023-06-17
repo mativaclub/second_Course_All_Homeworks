@@ -22,12 +22,11 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (employees.size() > MAX_SIZE) {
             throw new EmployeeStorageIsFullException("Storage is full");
         }
-        var key = fullName;
-        if (employees.containsKey(key)) {
+        if (employees.containsKey(fullName)) {
             throw new EmployeeAlreadyAddedException("Employee already added");
         }
         Employee newEmployee = new Employee(fullName, department, salary);
-        employees.put(key, newEmployee);
+        employees.put(fullName, newEmployee);
         return newEmployee;
     }
 

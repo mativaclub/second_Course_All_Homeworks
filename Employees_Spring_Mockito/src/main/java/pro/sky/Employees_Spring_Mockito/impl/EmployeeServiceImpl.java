@@ -22,7 +22,7 @@ public class EmployeeServiceImpl implements EmployeeService {
         if (employees.size() > MAX_SIZE) {
             throw new EmployeeStorageIsFullException("Storage is full");
         }
-        var key = fullName + " " + department + " " + salary;
+        var key = fullName;
         if (employees.containsKey(key)) {
             throw new EmployeeAlreadyAddedException("Employee already added");
         }
@@ -39,12 +39,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee find(String fullName) {
-        var key = fullName + " ";
-        var found = employees.get(key);
-        if (found == null) {
-            throw new EmployeeNotFoundException("Employee not found");
-        }
-        return found;
+        return employees.get(fullName);
     }
     public Map<String, Employee> getEmployees() {
         return employees;
@@ -53,10 +48,6 @@ public class EmployeeServiceImpl implements EmployeeService {
     public Collection<Employee> getAll() {
         return Collections.unmodifiableCollection(employees.values());
     }
-
-
-
-
 
 }
 

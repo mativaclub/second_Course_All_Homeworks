@@ -14,6 +14,7 @@ public class TestConstants {
     public static final int SALARY_2 = 30000;
     public static final int SALARY_3 = 70000;
     public static final int DEPARTMENT_ID_1 = 1;
+    public static final int DEPARTMENT_ID_2 = 2;
     public static final int WRONG_DEPARTMENT_ID = 2;
 
     public static final Employee EXPECTED_EMPLOYEE_1 = new Employee(FULL_NAME_1, DEPARTMENT_ID_1, SALARY_1);

@@ -19,6 +19,7 @@ import static pro.sky.Employees_Spring_Mockito.TestConstants.*;
 
 public class EmployeeServiceImplTest {
     public final EmployeeServiceImpl employeeServiceImpl = new EmployeeServiceImpl();
+
     @Test
     void addEmployeeWhenHeDontExistAndCheckSize() {
         //Checking that the list is empty
@@ -47,9 +48,9 @@ public class EmployeeServiceImplTest {
     @Test
     void throwEmployeeFullListException() {
         for (int i = 0; i < 100; i++) {
-           employeeServiceImpl.add(FULL_NAME_1 + i, SALARY_1, DEPARTMENT_ID_1);
+            employeeServiceImpl.add(FULL_NAME_1 + i, SALARY_1, DEPARTMENT_ID_1);
         }
-        assertThrows(EmployeeStorageIsFullException.class, () -> employeeServiceImpl.add(FULL_NAME_1 + 100,
+        assertThrows(EmployeeStorageIsFullException.class, () -> employeeServiceImpl.add(FULL_NAME_1 + 101,
                 SALARY_1, DEPARTMENT_ID_1));
     }
 
@@ -62,25 +63,24 @@ public class EmployeeServiceImplTest {
 
     @Test
     void findEmployeeWhenTheyExist() {
-        Employee expected = employeeServiceImpl.add(FULL_NAME_1,SALARY_1, DEPARTMENT_ID_1);
+        Employee expected = employeeServiceImpl.add(FULL_NAME_1, SALARY_1, DEPARTMENT_ID_1);
         Employee actual = employeeServiceImpl.find(FULL_NAME_1);
         Assertions.assertEquals(expected, actual);
     }
 
     @Test
     void removeEmployeeWhenTheyExist() {
-        employeeServiceImpl.add(FULL_NAME_1,SALARY_1, DEPARTMENT_ID_1);
+        employeeServiceImpl.add(FULL_NAME_1, SALARY_1, DEPARTMENT_ID_1);
         assertEquals(1, employeeServiceImpl.getAll().size());
         employeeServiceImpl.remove(FULL_NAME_1);
         assertFalse(employeeServiceImpl.getEmployees().containsValue(EXPECTED_EMPLOYEE_1));
         assertEquals(0, employeeServiceImpl.getAll().size());
     }
 
-
     @Test
     public void returnListOfEmployees() {
-        Employee employee1 = employeeServiceImpl.add(FULL_NAME_1,SALARY_1, DEPARTMENT_ID_1);
-        Employee employee2 = employeeServiceImpl.add(FULL_NAME_2,SALARY_2, DEPARTMENT_ID_1);
+        Employee employee1 = employeeServiceImpl.add(FULL_NAME_1, SALARY_1, DEPARTMENT_ID_1);
+        Employee employee2 = employeeServiceImpl.add(FULL_NAME_2, SALARY_2, DEPARTMENT_ID_1);
         Collection<Employee> expected = List.of(employee1, employee2);
         Collection<Employee> actual = employeeServiceImpl.getAll();
         assertIterableEquals(expected, actual);

@@ -13,4 +13,5 @@ public interface EmployeeService {
     Employee find(String fullName);
 
     Collection<Employee> getAll();
+
 }

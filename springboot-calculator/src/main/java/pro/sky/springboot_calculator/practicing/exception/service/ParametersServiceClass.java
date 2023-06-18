@@ -1,9 +1,11 @@
-package Exceptions;
+package pro.sky.springboot_calculator.practicing.exception.service;
+import org.springframework.stereotype.Service;
+import pro.sky.springboot_calculator.practicing.exception.WrongLoginException;
+import pro.sky.springboot_calculator.practicing.exception.WrongPasswordException;
 
-public class Main {
-
-
-    public static void check(String login, String password, String confirmPassword) {
+@Service
+public class ParametersServiceClass implements ParametersService {
+    public void validateParameters(String login, String password, String confirmPassword) {
         if (!login.matches("[a-zA-Z0-9_]+")) {
             throw new WrongLoginException("Login must contain letters, numbers and underline");
         }
@@ -25,22 +27,6 @@ public class Main {
         }
     }
 
-
-    public static void main(String[] args) {
-        String login = "java_skypro_go5";
-        String password = "D_1hWiKjjP_9";
-        String confirmPassword = "D_1hWiKjjP_9";
-
-
-        try {
-            check(login, password, confirmPassword);
-        } catch (WrongLoginException | WrongPasswordException t) {
-            System.out.println(t.getMessage());
-        } finally {
-            System.out.println("Good luck");
-        }
-
-
-    }
-
 }
+
+

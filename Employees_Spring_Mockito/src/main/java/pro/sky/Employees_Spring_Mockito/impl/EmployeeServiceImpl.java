@@ -19,7 +19,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 
     @Override
     public Employee add(String fullName, int department, int salary) {
-        if (employees.size() > MAX_SIZE) {
+        if (employees.size() >= MAX_SIZE) {
             throw new EmployeeStorageIsFullException("Storage is full");
         }
         if (employees.containsKey(fullName)) {

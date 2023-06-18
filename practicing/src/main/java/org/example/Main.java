@@ -1,9 +1,7 @@
-package Exceptions;
+package org.example;
 
 public class Main {
-
-
-    public static void check(String login, String password, String confirmPassword) {
+    public static boolean check(String login, String password, String confirmPassword) {
         if (!login.matches("[a-zA-Z0-9_]+")) {
             throw new WrongLoginException("Login must contain letters, numbers and underline");
         }
@@ -23,6 +21,7 @@ public class Main {
         if (!password.equals(confirmPassword)) {
             throw new WrongPasswordException();
         }
+        return true;
     }
 
 
@@ -42,5 +41,4 @@ public class Main {
 
 
     }
-
 }

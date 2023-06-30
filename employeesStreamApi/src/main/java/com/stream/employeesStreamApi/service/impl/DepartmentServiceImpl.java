@@ -1,4 +1,4 @@
-package com.stream.employeesStreamApi.impl;
+package com.stream.employeesStreamApi.service.impl;
 
 import com.stream.employeesStreamApi.exceptions.EmployeeNotFoundException;
 import com.stream.employeesStreamApi.model.Employee;

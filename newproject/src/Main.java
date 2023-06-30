@@ -44,14 +44,35 @@ public class Main {
         System.out.println();
 
         String text = "4521";
-//        System.out.println(text.chars().count());
+        System.out.println(text.chars().count());
         IntStream intFromText = text.chars();
-        System.out.println(intFromText.min());
-        
-//        System.out.println(intFromText.count());
+        OptionalInt opt = intFromText.min();
+        if (opt.isPresent()) {
+            System.out.println((char)opt.getAsInt());  //Преобразование кода к символу
+        }
+        OptionalInt opt1 = text.chars().max();
+        if (opt1.isPresent()) {
+            System.out.println((char)opt1.getAsInt());
+        }
+
+        int result = text.chars().map((e) -> Integer.parseInt(String.valueOf((char)e)))    //преобразование к числу через строку
+                .sum();
+        System.out.println(result);
+        int result1 = text.chars().map((e) -> Character.getNumericValue(e)) //преобразование к числу через метод Character
+                        .sum();
+        System.out.println(result1);
+
+        System.out.println();
 
 
+        Human human1 = new Human();
+        Human human = new Human();
+        Human human = new Human();
+        Human human = new Human();
+        Human human = new Human();
 
+        List<Human> humans = new ArrayList<>();
+        humans.add(human1)
 
 
 
